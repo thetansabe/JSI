@@ -1,4 +1,4 @@
-[
+const pokemons = [
     {
       "name": "Spearow",
       "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/21.png",
@@ -79,4 +79,39 @@
       "attack": 110,
       "defense": 65
     }
-]
+];
+
+
+//bai 1: in ra ten cua pokemon co' suc tan cong manh nhat
+//sap xep mang pokemons theo thu tu giam dan -> truy cap den pokemons[0]
+pokemons.sort( (objTruoc, objSau) => {} )
+
+
+//bai 2: in ra ten cua pokemon co' suc phong thu yeu nhat
+
+//bai 3: chon 2 pokemon, cho 2 con giao dau', tim con` manh hon:
+//pokemon A thang pokemon B khi vao chi khi 
+//trung binh cong cac chi so hp, attack, defense cua pokemon A > pokemon B
+
+//1) tao funtion TBC(attack, defense, hp){} => tra ve TBC
+//2) neu TBC(pokemonA) > TBC(pokemonB) thi pokemonA thang, nguoc lai pokemon B thang
+
+//bai 4: chon ra 2 pokemon NGAU NHIEN, yeu cau y het bai 3
+
+//bai 5:
+const typeAdvantages = [
+    { attackingType: "Water", effectiveAgainst: ["Fire", "Ground", "Rock"] },
+    { attackingType: "Fire", effectiveAgainst: ["Grass", "Bug", "Ice", "Steel"] },
+    { attackingType: "Grass", effectiveAgainst: ["Water", "Ground", "Rock"] },
+    { attackingType: "Electric", effectiveAgainst: ["Water", "Flying"] },
+    { attackingType: "Ice", effectiveAgainst: ["Grass", "Ground", "Flying", "Dragon"] },
+    { attackingType: "Fighting", effectiveAgainst: ["Normal", "Ice", "Rock", "Steel", "Dark"] },
+    { attackingType: "Poison", effectiveAgainst: ["Grass", "Fairy"] },
+    { attackingType: "Ground", effectiveAgainst: ["Fire", "Electric", "Poison", "Rock", "Steel"] },
+    { attackingType: "Flying", effectiveAgainst: ["Grass", "Fighting", "Bug"] },
+    { attackingType: "Psychic", effectiveAgainst: ["Fighting", "Poison"] }
+];
+
+//neu pokemon A co' type la water, ma pokemon B co' he Electric thi pokemon B duoc +20 diem tan cong
+//tinh toan lai TBC, tim pokemon thang
+  
