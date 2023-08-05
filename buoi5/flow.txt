@@ -1,0 +1,5 @@
+1) Sử dụng gmail hay dùng, đăng kí firebase
+2) Bày cách setup, config cấu trúc file
+3) Giải thích collection, document, field
+4) setDoc, giải thích async/await + try catch
+5) implement những hàm còn lại và giải thích: docId, docRef, ...

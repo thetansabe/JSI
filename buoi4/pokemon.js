@@ -94,9 +94,27 @@ pokemons.sort( (objTruoc, objSau) => {} )
 //trung binh cong cac chi so hp, attack, defense cua pokemon A > pokemon B
 
 //1) tao funtion TBC(attack, defense, hp){} => tra ve TBC
+function TBC(pokemon){
+    return (pokemon.attack + pokemon.defense + pokemon.hp)/3;
+} 
+
+const pokemonA = pokemons[0];
+const pokemonB = pokemons[2];
+
 //2) neu TBC(pokemonA) > TBC(pokemonB) thi pokemonA thang, nguoc lai pokemon B thang
+if(TBC(pokemonA) > TBC(pokemonB)){
+    console.log("Pokemon", pokemonA.name, "wins!");
+}
+else if(TBC(pokemonA) == TBC(pokemonB)){
+    console.log("Draw!");
+}
+else{
+    console.log("Pokemon ", pokemonB.name, " wins!");
+}
+
 
 //bai 4: chon ra 2 pokemon NGAU NHIEN, yeu cau y het bai 3
+//Math.random()
 
 //bai 5:
 const typeAdvantages = [
@@ -111,7 +129,7 @@ const typeAdvantages = [
     { attackingType: "Flying", effectiveAgainst: ["Grass", "Fighting", "Bug"] },
     { attackingType: "Psychic", effectiveAgainst: ["Fighting", "Poison"] }
 ];
-
+//chon ra 2 pokemon ngau nhien
 //neu pokemon A co' type la water, ma pokemon B co' he Electric thi pokemon B duoc +20 diem tan cong
 //tinh toan lai TBC, tim pokemon thang
   
