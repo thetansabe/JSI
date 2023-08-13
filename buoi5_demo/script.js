@@ -5,26 +5,26 @@ import {
   doc,
   getDocs,
   deleteDoc,
-  updateDoc
+  updateDoc,
 } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
 
 async function addPokemon(pokemon) {
   try {
     const pokemonRef = await addDoc(collection(db, "pokemons"), pokemon);
     console.log("Document written with ID: ", pokemonRef.id);
-  } catch (e) {
-    console.error("Error adding document: ", e);
+  } catch (error) {
+    console.log("Error when add pokemon: ", error);
   }
 }
 
-const newPokemon = {
-  name: "Charmander",
-  attack: 100,
-  defense: 100,
-  hp: 100,
-};
+// const newPokemon = {
+//   name: "abc",
+//   attack: 100,
+//   defense: 100,
+//   hp: 100,
+// };
 
-// await addPokemon(newPokemon)
+// await addPokemon(newPokemon);
 
 async function getPokemons() {
   try {
@@ -41,8 +41,7 @@ async function getPokemons() {
   }
 }
 
-const pokemons = await getPokemons();
-console.log(pokemons);
+
 
 async function deletePokemon(docId) {
   try {
@@ -53,7 +52,7 @@ async function deletePokemon(docId) {
   }
 }
 
-// await deletePokemon("mBI7oYDxvDT1xND98Fnq");
+// deletePokemon("4gP039g0T4mrwbGsUhyd");
 // const pokemons = await getPokemons();
 // console.log(pokemons);
 
@@ -67,6 +66,6 @@ async function updatePokemon(docId, newPokemon){
     }
 }
 
-// await updatePokemon("rwwA0jJFb3V9IQOmkcGw", {name: "hello world3"});
-// const pokemons = await getPokemons();
-// console.log(pokemons);
+await updatePokemon("ANb6eW5TvdXqlilFyfD6", {name: "hello world", hp: 1000});
+const pokemons = await getPokemons();
+console.log(pokemons);
