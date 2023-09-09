@@ -1,0 +1,59 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(https://cdn.registerdisney.go.com/v4/asset/bundler/DISNEY/v4/images/v1/disney-background-web.webp);
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1{
+    color: white;
+}
+
+.holder{
+    background-color: white;
+    padding: 26px;
+    border-radius: 12px;
+}
+
+.input-group{
+    padding: 12px 0;
+    line-height: 2.0;
+    color: black;
+    font-weight: bold;
+}
+
+.input-group p{
+    color: gray;
+}
+
+.input-group input{
+    padding: 8px 12px;
+    width: 100%;
+}
+
+button{
+    margin-top: 20px;
+    width: 360px;
+    height: 60px;
+    border-radius: 12px;
+    background-color: rgb(47, 47, 245);
+    font-size: 26px;
+    font-weight: bold;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transform: translateX(50%);
+}
