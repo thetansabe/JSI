@@ -19,17 +19,17 @@ document.getElementById('login-btn').addEventListener('click', async e => {
     try{
         const userCreadential = await signInWithEmailAndPassword(auth, email, password);
         console.log(userCreadential);
+
+        //store is logged into localstorage
+        localStorage.setItem("isLogged", true);
+
+        //redirect to homepage
+        window.location.href = '../index.html';
         
     }catch(error){
         console.log(error);
         console.log("Readable error message: ", authErrorCodes[error.code]);
     }
-
-    //store is logged into localstorage
-    localStorage.setItem("isLogged", true);
-
-    //redirect to homepage
-    window.location.href = '../index.html';
 });
 
 //acc: test1@gmail.com/xinchao123
